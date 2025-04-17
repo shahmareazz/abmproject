@@ -1,0 +1,69 @@
+/* ProcessSection.css */
+.process-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #ffffff;
+    height: 100vh;
+    gap: 50px;
+  }
+  
+  .contentNew {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  
+  
+  .process-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .step-number {
+    background-color: #5d6d7e;
+    color: white;
+    font-size: 1 rem;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  .step-text {
+    text-align: left;
+  }
+  
+  .step-text h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .step-text p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .image-container {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .image-container img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  

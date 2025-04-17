@@ -1,0 +1,14 @@
+.navbar {
+    background-color: white ; /* Change to your preferred color */
+    padding: 10px 2px;
+  }
+
+  .nav-item{
+    margin-left: 50px;
+    color: white !important ;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .nav-item:hover{
+    text-decoration: underline; 
+  }
