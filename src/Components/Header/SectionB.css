@@ -1,89 +1,155 @@
 .grid-container {
-    padding: 50px 50px;
+  padding: 50px;
+}
+
+/* Large Left Image */
+.large-card {
+  position: relative;
+  height: 500px; /* Adjust height */
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Add gap below the large card */
+}
+
+.large-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the area properly */
+  object-position: center; /* Keeps the image centered */
+}
+
+/* Small Cards (Right Side) */
+.small-card {
+  position: relative;
+  height: 240px; /* Adjust height */
+  overflow: hidden;
+  margin-bottom: 20px; /* Add gap between small cards */
+}
+
+.small-card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the area properly */
+  object-position: center; /* Keeps the image centered */
+  transition: transform 0.3s ease-in-out;
+}
+
+.small-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Text Overlay */
+.overlay {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.overlayNew h3 {
+  font-size: 20px;
+  color: white;
+}
+
+.overlayNew p {
+  font-size: 14px;
+}
+
+/* Button */
+.btn_one {
+  background: white;
+  border: none;
+  padding: 8px 14px;
+  margin-top: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn_one:hover {
+  background: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .grid-container {
+    padding: 30px;
   }
-  
-  /* Large Left Image */
+
+  .row {
+    flex-direction: column;
+  }
+
   .large-card {
-    position: relative;
-    height: 500px; /* Adjust height */
+    height: 350px;
   }
-  
-  .large-card img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  /* Small Cards (Right Side) */
+
   .small-card {
-    position: relative;
-    height: 240px; /* Adjust height */
-    overflow: hidden;
+    height: 200px;
   }
-  
-  .small-card img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    padding: 20px;
   }
-  
-  .small-card:hover img {
-    transform: scale(1.05);
+
+  .large-card {
+    height: 300px;
   }
-  
-  /* Text Overlay */
+
+  .small-card {
+    height: 240px; /* Same size for small cards */
+  }
+
   .overlay {
-    position: absolute;
-    bottom: 12%;
-    left: 10%;
-    color: white;
-    font-weight: bold;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    bottom: 10%;
+    left: 5%;
+    font-size: 18px;
   }
-  
+
   .overlayNew h3 {
-    font-size: 20px;
- color: white;
+    font-size: 18px;
   }
-  
-  .overlayNew p {
-    font-size: 14px;
+
+  /* Ensure all images are of the same size in the tablet view */
+  .small-card img {
+    object-fit: cover; /* Ensures the image covers the area properly */
   }
-  
-  /* Button */
-  .btn_one {
-    background: white;
-    border: none;
-    padding: 8px 14px;
-    margin-top: 8px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+  .grid-container {
+    padding: 15px;
   }
-  
-  .btn_one:hover {
-    background: #ddd;
+
+  .large-card {
+    height: 250px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 992px) {
-    .grid-container {
-      padding: 30px 40px;
-    }
-  
-    .row {
-      flex-direction: column;
-    }
-  
-    .large-card {
-      height: 350px;
-    }
-  
-    .small-card {
-      height: 200px;
-    }
+
+  .small-card {
+    height: 240px; /* Keep same size for small cards */
   }
-  
+
+  .overlay {
+    bottom: 8%;
+    left: 5%;
+    font-size: 16px;
+  }
+
+  .overlayNew h3 {
+    font-size: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .small-card img {
+    object-fit: cover; /* Ensures the image covers the area properly */
+  }
+}

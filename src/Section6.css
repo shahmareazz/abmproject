@@ -1,50 +1,121 @@
-
+/* Icon Grid Container */
 .icon-grid-container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 70px;
-  }
-  
-  .section-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #5d6d7e;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+  gap: 40px;
+}
+
+/* Grid Item Style */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Style */
+.icon {
+  font-size: 2rem;
+  color: #778899;
+  margin-bottom: 10px;
+}
+
+/* Title Style */
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #5d6d7e !important;
+}
+
+/* Paragraph Style */
+p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ------------------------- Responsive Design ------------------------- */
+
+/* For Medium Screens (Tablets and Small Laptops) */
+@media (max-width: 992px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
   }
-  
-  .grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
+
   .icon {
-    font-size: 2rem;
-    color: #778899;
-    margin-bottom: 10px;
+    font-size: 1.8rem; /* Slightly smaller icon */
   }
-  
+
   h3 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #5d6d7e !important;
+    font-size: 1.4rem; /* Adjust title size */
   }
-  
+
   p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 0.95rem; /* Adjust paragraph size */
   }
-  
+}
+
+/* For Small Screens (Phones and Small Tablets) */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+
+  .icon {
+    font-size: 1.6rem; /* Smaller icon size */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Adjust title size */
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+}
+
+/* For Extra Small Screens (Very Small Mobile Devices) */
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+
+  .icon {
+    font-size: 1.4rem; /* Smaller icon size */
+  }
+
+  h3 {
+    font-size: 1.1rem; /* Adjust title size */
+  }
+
+  p {
+    font-size: 0.85rem; /* Adjust paragraph size */
+  }
+}

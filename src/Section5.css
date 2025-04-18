@@ -1,65 +1,118 @@
 /* Testimonials.css */
 .testimonials-container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 170px !important;
-  }
-  
-  .section-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  
-  .testimonials-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 170px !important;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #5d6d7e; /* Color update to match your theme */
+}
+
+/* Grid layout for testimonials */
+.testimonials-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+}
+
+/* Styling for each testimonial card */
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: left;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 20px; /* Spacing between testimonial cards */
+}
+
+/* Hover effect for testimonials */
+.testimonial-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for testimonial text */
+.testimonial-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Footer of each testimonial card */
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Image styling for each testimonial profile */
+.testimonial-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 5px;
+  object-fit: cover; /* Ensures the image doesn't get distorted */
+}
+
+/* Name styling in the footer */
+.testimonial-name {
+  font-weight: bold;
+  margin-bottom: -5px !important;
+}
+
+/* Description styling in the footer */
+.testimonial-description {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+/* ------------------------- Responsive Design ------------------------- */
+
+/* On large screens (more than 1200px) */
+@media (max-width: 1200px) {
   .testimonial-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
-    text-align: left;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    cursor: pointer;
+    width: 48%; /* Two testimonials per row */
   }
-  
-  .testimonial-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* On medium screens (between 768px and 1200px) */
+@media (max-width: 992px) {
+  .testimonial-card {
+    width: 48%; /* Two testimonials per row */
   }
-  
+}
+
+/* On smaller screens (between 576px and 768px) */
+@media (max-width: 768px) {
+  .testimonial-card {
+    width: 100%; /* One testimonial per row */
+  }
+}
+
+/* On mobile devices (below 576px) */
+@media (max-width: 576px) {
+  .section-heading {
+    font-size: 1.5rem; /* Smaller heading size for mobile */
+  }
+
   .testimonial-text {
-    font-size: 1.2rem;
-    font-style: italic;
-    margin-bottom: 15px;
+    font-size: 1rem; /* Slightly smaller text on mobile */
   }
-  
-  .testimonial-footer {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .testimonial-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 5px;
-  }
-  
+
   .testimonial-name {
-    font-weight: bold;
-    margin-bottom: -5px !important;
+    font-size: 1rem; /* Adjust name font size */
   }
-  
+
   .testimonial-description {
-    color: gray;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Smaller description for mobile */
   }
-  
+}

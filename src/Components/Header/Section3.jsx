@@ -30,17 +30,17 @@ const Section3 = () => {
           <div className="step-number">02</div>
           <div className="step-text">
             <h3>Processing</h3>
-            <motion.p
+            {/* <motion.p
       className="text-lg text-gray-700 p-4 rounded-xl shadow-md bg-white max-w-xl mx-auto"
       initial={{ opacity: 0, y: 30, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
       whileHover={{ scale: 1.05, color: "#1f2937" }}
-    >
+    > */}
               When the briefing process is complete and what the client wants
               has been achieved, then we carry out the execution of the desired
               concept.
-            </motion.p>
+            {/* </motion.p> */}
           </div>
         </div>
         <div className="process-step">
@@ -60,59 +60,23 @@ const Section3 = () => {
     </section>
  <Section5/>
       {/* Background Section image */}
-      <div style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width:"100%",
-          height:"400px",
-          gap: "40px",
-          padding: "40px",
-          backgroundImage: `url(https://png.pngtree.com/thumb_back/fh260/background/20221202/pngtree-white-crumpled-paper-sheet-texture-background-image_1485982.jpg)`,
-          backgroundSize: "cover",
-          backgroundPosition: "center" ,
-          marginBottom:"150px"}}> 
-        
-        {/* Image Section */}
-        <div style={{ flex: 1, display: "flex", justifyContent: "center" }}>
-          <img
-            src={sectionnew}
-            alt="Sofa"
-            style={{ width: "550px", maxWidth: "100%", objectFit: "contain" }}/>
-        </div>
-        {/* Text Section */}
-        <div style={{ flex: 1, textAlign: "left", padding: "20px", maxWidth: "600px" }}>
-          <img src={dis} style={{
-            width:"18%"
-          }} alt="" />
-          <h1   style={{
-              fontSize: "50px",
-              fontWeight: "bolder",
-              color: "#444",
-              lineHeight: "1.5",
-              padding: "10px",
-              borderRadius: "10px"
-          }}>
+      <div className="promo-section">
+  <div className="promo-image">
+    <img
+      src={sectionnew}
+      alt="Sofa"
+    />
+  </div>
 
-            {/* typing text */}
-               {/* <Typical
-        steps={['Hello', 1000, 'Hello, World!', 1000, 'Hello, React!', 1000]}
-        loop={Infinity}
-        wrapper="span"
-      /> */}
-            25% OFF
-          </h1>
-          <h2   style={{
-              fontSize: "25px",
-              fontWeight: "400",
-              color: "#444",
-              lineHeight: "1.5",
-              padding: "5px",
-              borderRadius: "10px",}}>ON ALL ORDERS ABOVE $230</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit repellendus quis, quia veritatis culpa enim necessitatibus? </p>
-          <button style={{backgroundColor:"#444",color:"white",borderRadius: "10px",padding:"10px"}}>GRAB THIS OFFER</button>
-        </div>     
-      </div>
+  <div className="promo-text">
+    <img src={dis} alt="Discount" className="promo-discount-img" />
+    <h1>25% OFF</h1>
+    <h2>ON ALL ORDERS ABOVE $230</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit repellendus quis, quia veritatis culpa enim necessitatibus?</p>
+    <button>GRAB THIS OFFER</button>
+  </div>
+</div>
+
     </div>
   );
 };

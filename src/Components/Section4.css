@@ -1,40 +1,122 @@
 .product-card {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .image-container {
-    position: relative;
-    cursor: pointer;
-  }
-  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .product-image {
+  transform: scale(1.05);
+}
+
+.quick-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(93, 64, 55, 0.9);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .quick-details {
+  opacity: 1;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
   .product-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    height: 200px;
   }
-  
-  .image-container:hover .product-image {
-    transform: scale(1.05); /* Slight zoom effect */
+}
+
+@media (max-width: 576px) {
+  .product-image {
+    height: 180px;
   }
-  
-  .quick-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark transparent background */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: bold;
-    opacity: 0;
-   
+
+  .quick-details p {
+    font-size: 0.9rem;
   }
-  
-  .image-container:hover .quick-details {
-    opacity: 1; /* Show text on hover */
+}
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .product-image {
+  transform: scale(1.05);
+}
+
+.quick-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(93, 64, 55, 0.9);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .quick-details {
+  opacity: 1;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .product-image {
+    height: 200px;
   }
-  
+}
+
+@media (max-width: 576px) {
+  .product-image {
+    height: 180px;
+  }
+
+  .quick-details p {
+    font-size: 0.9rem;
+  }
+}

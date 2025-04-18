@@ -27,9 +27,9 @@
   background: #778899;
   color: white;
   max-width: 50%;
-  padding:20px 80px;
-margin-left: -80px;
- margin-right: 40px;
+  padding: 20px 80px;
+  margin-left: -80px;
+  margin-right: 40px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: left;
 }
@@ -63,4 +63,95 @@ margin-left: -80px;
   background: white;
   color: #5d6d7e;
   transform: translateY(-2px);
+}
+
+/* Responsive Design */
+
+/* For Tablet (Adjustments) */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Allow content to flow naturally */
+    padding: 50px 20px;
+  }
+
+  .header img {
+    width: 80%; /* Ensure the image takes up less space */
+    height: auto;
+    position: relative;
+    margin-bottom: 20px; /* Space between image and content */
+    border-radius: 10px; /* Soft round corners for a smooth look */
+  }
+
+  .header .content {
+    max-width: 70%; /* Content will now take up more space on tablet */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px;
+    text-align: center; /* Center the text on tablet for better balance */
+  }
+
+  .header h2 {
+    font-size: 2.4rem; /* Slightly smaller font size for readability on tablet */
+    margin-bottom: 15px;
+  }
+
+  .header p {
+    font-size: 1.05rem;
+    margin-bottom: 15px; /* Reduce margin between text */
+  }
+
+  .header button {
+    padding: 10px 20px;
+    font-size: 1rem; /* Slightly smaller button text */
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 15px;
+  }
+
+  .header img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .header .content {
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .header h2 {
+    font-size: 1.8rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .header button {
+    padding: 10px 15px;
+  }
+}
+
+/* For very small mobile screens */
+@media (max-width: 480px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
+  }
+
+  .header button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
